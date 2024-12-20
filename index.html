@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDV - Cadastro de Produtos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Produtos</h1>
+    
+    <!-- Aviso de observação -->
+    <div class="notice">
+      <p><strong>Aviso:</strong> Preencha todos os campos corretamente para garantir que os dados do produto sejam cadastrados corretamente.</p>
+    </div>
+
+    <!-- Aviso de observação -->
+    <div class="notice" id="notice">
+      <p><strong>Observação:</strong> Em caso de perda de dados, não conseguirei enviá-los. Tente antes clicar em "Exportar Dados" e depois use o "Escolher ficheiro".</p>
+    </div>
+
+    <form id="product-form">
+      <input type="text" id="name" placeholder="Nome do Produto" required>
+      <input type="number" id="price" placeholder="Preço do Produto" required>
+      <input type="number" id="quantity" placeholder="Quantidade em Estoque" required>
+      <input type="text" id="category" placeholder="Categoria do Produto" required>
+      <input type="text" id="description" placeholder="Descrição do Produto" required>
+      <button type="submit">Cadastrar Produto</button>
+    </form>
+
+    <h2>Lista de Produtos</h2>
+    <ul id="product-list"></ul>
+
+    <h1>Cadastro de Clientes</h1>
+
+    <form id="client-form">
+      <input type="text" id="client-name" placeholder="Nome do Cliente" required>
+      <input type="text" id="client-cpf" placeholder="CPF" required>
+      <input type="tel" id="client-phone" placeholder="Telefone" required>
+      <input type="email" id="client-email" placeholder="Email" required>
+      <input type="text" id="client-address" placeholder="Endereço" required>
+      <input type="text" id="client-city" placeholder="Cidade" required>
+      <label for="client-state">Estado:</label>
+      <select id="client-state" name="estado" required>
+        <option value="">Selecione o estado</option>
+        <!-- Lista de opções de estados -->
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AM">Amazonas</option>
+        <option value="AP">Amapá</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+        <option value="EX">Estrangeiro</option>
+      </select>
+      <input type="text" id="client-postal-code" placeholder="Código Postal" required>
+      <button type="submit">Cadastrar Cliente</button>
+    </form>
+
+    <div class="actions">
+      <button id="export-btn">Exportar Dados</button>
+      <input type="file" id="import-file" accept=".json">
+    </div>
+
+    <h2>Lista de Clientes</h2>
+    <ul id="client-list"></ul>
+
+    <h1>Realizar Pagamento</h1>
+    <form id="payment-form">
+      <input type="text" id="payment-client" placeholder="Nome do Cliente" required>
+      <select id="payment-product" required>
+        <option value="">Selecione o Produto</option>
+        <!-- Lista de opções de produtos será populada dinamicamente -->
+      </select>
+      <input type="number" id="payment-amount" placeholder="Valor do Pagamento" required>
+      <select id="payment-method" required>
+        <option value="">Selecione o Método de Pagamento</option>
+        <option value="credit-card">Cartão de Crédito</option>
+        <option value="debit-card">Cartão de Débito</option>
+        <option value="bank-transfer">Transferência Bancária</option>
+        <option value="pix">Pix</option>
+        <option value="cash">Dinheiro</option>
+      </select>
+      <button type="submit">Finalizar Pagamento</button>
+    </form>
+
+    <h2>Histórico de Pagamentos</h2>
+    <ul id="payment-history"></ul>
+  </div>
+
+  <!-- Campo de seleção de produto -->
+  <select id="payment-product" required>
+    <option value="">Selecione o Produto</option>
+  </select>
+
+  <script src="script.js"></script>
+</body>
+</html>

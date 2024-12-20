@@ -1,0 +1,310 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef; /* Alteração do fundo para um tom mais suave */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff; /* Fundo branco para melhor contraste */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 28px; /* Ajuste do tamanho da fonte */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #007bff;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.actions button,
+.actions input {
+    margin: 0;
+    flex: 1;
+    max-width: 48%;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #444;
+    text-align: center;
+    font-size: 24px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+ul li {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+ul li:nth-child(odd) {
+    background: #f1f1f1;
+}
+
+ul li:hover {
+    background-color: #e9ecef;
+    transform: scale(1.02);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Estilo para a exclusão e edição */
+button.delete-btn {
+    background-color: #ff6347;
+}
+
+button.delete-btn:hover {
+    background-color: #d9534f;
+}
+
+button.edit-btn {
+    background-color: #ffc107;
+}
+
+button.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Estilo para o aviso */
+.notice {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo para o aviso externo */
+.notices {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove margem do parágrafo dentro da notice */
+.notice p, .notices p {
+    margin: 0;
+}
+
+/* Estilo geral para o formulário */
+#payment-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo para os campos de entrada */
+  #payment-form input,
+  #payment-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Faz com que padding e border não aumentem a largura total */
+  }
+  
+  /* Estilo para o botão de envio */
+  #payment-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #payment-form button:hover {
+    background-color: #218838;
+  }
+  
+  /* Estilo para o campo de seleção de produto */
+  #payment-form #payment-product {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none; /* Remove os estilos padrão do navegador em alguns dispositivos */
+    -moz-appearance: none; /* Remove os estilos padrão do navegador em alguns dispositivos */
+  }
+  
+  /* Estilo para o botão de envio (hover) */
+  #payment-form button:hover {
+    background-color: #218838;
+  }
+  
+  /* Estilo para o histórico de pagamentos */
+  #payment-history {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #payment-history li {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f4f4f4;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #payment-history .info {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  #payment-history .actions {
+    font-size: 14px;
+  }
+  
+  #payment-history button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #payment-history button:hover {
+    background-color: #c82333;
+  }  
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    form input,
+    form select,
+    button {
+        font-size: 14px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .actions button,
+    .actions input {
+        max-width: 100%;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        margin: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    form input,
+    form select {
+        font-size: 13px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .actions button,
+    .actions input {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    ul li {
+        font-size: 13px;
+    }
+}
